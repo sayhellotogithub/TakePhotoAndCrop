@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SelectShowPicViewAttrs">
+        <attr name="SSPVResultStaus" format="boolean"/>
+        <attr name="SSPVShowOrHideText" format="string"/>
+        <attr name="SSPVTakePhotoText" format="string"/>
+        <attr name="SSPVBackGround" format="color"/>
+    </declare-styleable>
+</resources>
