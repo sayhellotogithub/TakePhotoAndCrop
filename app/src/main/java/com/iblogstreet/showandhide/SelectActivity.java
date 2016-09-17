@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.view.Window;
-import android.widget.LinearLayout;
 
 import com.iblogstreet.showandhide.view.SelectShowPicView;
 
@@ -14,14 +12,13 @@ public class SelectActivity
         extends Activity implements SelectShowPicView.OnSelectShowPicViewListener
 {
     private static final String TAG = "MainActivity";
-    private LinearLayout mLlResult;
     SelectShowPicView mSspv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_select);
+       setContentView(R.layout.activity_select);
         initView();
         initData();
         initEvent();
@@ -33,7 +30,6 @@ public class SelectActivity
         mSspv.setOnSelectShowPicViewListener(this);
     }
     private void initView() {
-        mLlResult = (LinearLayout) findViewById(R.id.ll_result);
         mSspv= (SelectShowPicView) findViewById(R.id.sspv);
     }
     @Override
@@ -50,14 +46,12 @@ public class SelectActivity
     }
 
     @Override
-    public void showResult(Boolean resultStatus) {
-        mLlResult.setVisibility(resultStatus
-                                ? View.VISIBLE
-                                : View.GONE);
+    public void startActivityResult(Intent intent, int requestCode) {
+        startActivityForResult(intent,requestCode);
     }
 
     @Override
-    public void startActivityResult(Intent intent, int requestCode) {
-        startActivityForResult(intent,requestCode);
+    public void onStretchFinished(boolean isOpened) {
+
     }
 }

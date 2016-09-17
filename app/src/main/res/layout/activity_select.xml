@@ -20,19 +20,13 @@
         android:id="@+id/sspv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        app:SSPVStretchView="@layout/item_result"
+        app:SSPVContentView="@layout/view_select_show_pic"
+        app:SSPVTakePhotoText="请上传拍摄的照片"
+        app:SSPVShowOrHideExpandText="展开"
+        app:SSPVShowOrHideShrinkText="收缩"
+        app:SSPVShowTakePhotoIcon="true"
+        app:SSPVIsOpen="false"
         />
-    <LinearLayout
-        android:id="@+id/ll_result"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#0B83D9"
-        android:gravity="center"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="这是结果"/>
-    </LinearLayout>
+
 </LinearLayout>

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="SelectShowPicViewAttrs">
-        <attr name="SSPVResultStaus" format="boolean"/>
-        <attr name="SSPVShowOrHideText" format="string"/>
+        <attr name="SSPVIsOpen" format="boolean"/>
+        <attr name="SSPVShowOrHideExpandText" format="string"/>
+        <attr name="SSPVShowOrHideShrinkText" format="string"/>
         <attr name="SSPVTakePhotoText" format="string"/>
         <attr name="SSPVBackGround" format="color"/>
+        <!--展示要显示的布局，如果没有配制，则展开按钮不显示 -->
+        <attr name="SSPVStretchView" format="reference"/>
+        <!--内容布局-->
+        <attr name="SSPVContentView" format="reference" />
+        <attr name="SSPVShowTakePhotoIcon" format="boolean"/>
     </declare-styleable>
 </resources>
